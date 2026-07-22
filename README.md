@@ -4,6 +4,8 @@
 
 A SwiftUI macOS app for booting supported Apple devices in PWNDFU and running usb8 restore / Purple mode workflows.
 
+If this project is useful to you, optional support is welcome: `TNiSqoGMrXaPQUwYKkTQfzn7FhDKo22zMR` (`TRC20`).
+
 ## Features
 
 - Detect connected Apple devices in normal, recovery, DFU, and PWNDFU modes.
