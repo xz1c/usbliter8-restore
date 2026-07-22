@@ -1,0 +1,230 @@
+{
+  "assets" : [
+    {
+      "board" : "D321AP",
+      "file" : "t8020\/D321AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "D321AP",
+      "file" : "t8020\/D321AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2271600,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "D331AP",
+      "file" : "t8020\/D331AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "D331AP",
+      "file" : "t8020\/D331AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2271608,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "D331PAP",
+      "file" : "t8020\/D331PAP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "D331PAP",
+      "file" : "t8020\/D331PAP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2271600,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J171AP",
+      "file" : "t8020\/J171AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J171AP",
+      "file" : "t8020\/J171AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2238336,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J172AP",
+      "file" : "t8020\/J172AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J172AP",
+      "file" : "t8020\/J172AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2238336,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J210AP",
+      "file" : "t8020\/J210AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J210AP",
+      "file" : "t8020\/J210AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2238288,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J211AP",
+      "file" : "t8020\/J211AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J211AP",
+      "file" : "t8020\/J211AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2238288,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J217AP",
+      "file" : "t8020\/J217AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J217AP",
+      "file" : "t8020\/J217AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2238288,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J218AP",
+      "file" : "t8020\/J218AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "J218AP",
+      "file" : "t8020\/J218AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2238288,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "N841AP",
+      "file" : "t8020\/N841AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 8429529,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "N841AP",
+      "file" : "t8020\/N841AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2254816,
+      "soc" : "t8020"
+    },
+    {
+      "board" : "D421AP",
+      "file" : "t8030\/D421AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 6447256,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "D421AP",
+      "file" : "t8030\/D421AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2777592,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "D431AP",
+      "file" : "t8030\/D431AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 6447256,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "D431AP",
+      "file" : "t8030\/D431AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2777752,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "D79AP",
+      "file" : "t8030\/D79AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 6447256,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "D79AP",
+      "file" : "t8030\/D79AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2416688,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "J181AP",
+      "file" : "t8030\/J181AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 6447256,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "J181AP",
+      "file" : "t8030\/J181AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2382912,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "J182AP",
+      "file" : "t8030\/J182AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 6447256,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "J182AP",
+      "file" : "t8030\/J182AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2382912,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "N104AP",
+      "file" : "t8030\/N104AP\/diag.img4.enc",
+      "kind" : "diag",
+      "plainSize" : 6447256,
+      "soc" : "t8030"
+    },
+    {
+      "board" : "N104AP",
+      "file" : "t8030\/N104AP\/ibss.raw.enc",
+      "kind" : "ibss",
+      "plainSize" : 2498632,
+      "soc" : "t8030"
+    }
+  ],
+  "format" : "aes-gcm-encrypted-diag-assets",
+  "version" : 1
+}

@@ -1,0 +1,50 @@
+{
+  "assets" : [
+    {
+      "codename" : "d321",
+      "file" : "d321.ibec.enc"
+    },
+    {
+      "codename" : "d331",
+      "file" : "d331.ibec.enc"
+    },
+    {
+      "codename" : "d331p",
+      "file" : "d331p.ibec.enc"
+    },
+    {
+      "codename" : "d421",
+      "file" : "d421.ibec.enc"
+    },
+    {
+      "codename" : "d431",
+      "file" : "d431.ibec.enc"
+    },
+    {
+      "codename" : "d79",
+      "file" : "d79.ibec.enc"
+    },
+    {
+      "codename" : "ipad11b",
+      "file" : "ipad11b.ibec.enc"
+    },
+    {
+      "codename" : "j210",
+      "file" : "j210.ibec.enc"
+    },
+    {
+      "codename" : "j217",
+      "file" : "j217.ibec.enc"
+    },
+    {
+      "codename" : "n104",
+      "file" : "n104.ibec.enc"
+    },
+    {
+      "codename" : "n841",
+      "file" : "n841.ibec.enc"
+    }
+  ],
+  "format" : "aes-gcm-encrypted-ibec-assets",
+  "version" : 1
+}

@@ -1,0 +1,44 @@
+name: usb8-restore
+options:
+  bundleIdPrefix: com.usb8restore
+  deploymentTarget:
+    macOS: "11.5"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "11.5"
+targets:
+  usb8-restore:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/Usb8RestoreSwift
+        excludes:
+          - Assets.xcassets/**
+          - Resources/**
+      - path: Sources/Usb8RestoreSwift/Resources
+        type: folder
+    dependencies:
+      - sdk: IOKit.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.usb8restore.app
+        PRODUCT_NAME: usb8 restore
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: Sources/Usb8RestoreSwift/App/Info.plist
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+    scheme:
+      testTargets:
+        - Usb8RestoreSwiftTests
+  Usb8RestoreSwiftTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests/Usb8RestoreSwiftTests
+    dependencies:
+      - target: usb8-restore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.usb8restore.tests
+        GENERATE_INFOPLIST_FILE: YES

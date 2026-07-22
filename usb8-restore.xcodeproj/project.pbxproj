@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F9A27A5FEBDC7E3A7CD96CC /* PurpleModeAssetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D9151F4E1AC35B4CB2D5B7 /* PurpleModeAssetStore.swift */; };
+		13A5EDD4FA1F16BBEC9AEE2E /* PurpleModeAssetStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507EF7521A3C55FA216A2E9 /* PurpleModeAssetStoreTests.swift */; };
+		23FF4F8314650920413B1FB2 /* DeviceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEABC460BF029FFF5264F855 /* DeviceModels.swift */; };
+		2A6BBB2FB9045BB8AB073A87 /* BootAssetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D377BB0B30FEB50C11C6217 /* BootAssetStore.swift */; };
+		41106F0134743B5E68834D7E /* PurpleModeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587502391FF0E499D14CB9D /* PurpleModeService.swift */; };
+		614149E11A8E2A27A2F3272F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B824F62FD0096C54D09243C2 /* IOKit.framework */; };
+		625A01F4724F40E3C5BC1671 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 95228429C852C31137B45748 /* Resources */; };
+		713E2422903B84A5F158C85E /* Usb8RestoreAppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B9C4F2DDC67DC2773CC8247 /* Usb8RestoreAppIcon.icns */; };
+		7613DD1C99DB686B768CEE79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872BA8841CFEC3C20B8B2E97 /* ContentView.swift */; };
+		7AA812E9D1F509B2205FEA2C /* Usb8RestoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3B268D419A5E2E6DF525D5 /* Usb8RestoreApp.swift */; };
+		834E96D050D830A40958E88B /* Usbliter8BootOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBB0FC8292C476EBFA50B3 /* Usbliter8BootOutputTests.swift */; };
+		8B5AB5BDBC327A21137427A3 /* DFUSerialParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054EB1174B833C4783A9CB2 /* DFUSerialParser.swift */; };
+		9C86C402F801488150B5FF79 /* BootAssetStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FFA93A1730F0E50420B5A /* BootAssetStoreTests.swift */; };
+		A2A921344C80F39B16116543 /* RestoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE876566BB54604D543EA0E /* RestoreViewModel.swift */; };
+		A80AAFE258B635C04B05EAC4 /* DeviceSupportCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76743C159B7DF71D4EB22396 /* DeviceSupportCatalogTests.swift */; };
+		B106C6164FA5B113C7C83650 /* DeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005492CCAB0FE6286AC6EE9C /* DeviceMonitor.swift */; };
+		B26020CC5A2A1C907810A371 /* DeviceSupportCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4525983962E6A316C75F23D7 /* DeviceSupportCatalog.swift */; };
+		BCF0E1CFAFAD98DFCF21AEBD /* AppResourceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5321F81EFC6AEFD0A77924 /* AppResourceLocator.swift */; };
+		CA1095CE3D5734C57F810A04 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E398CD0F6719F2E338A1DAE /* AppLanguage.swift */; };
+		CC32692370FEB339FDDEC23E /* DFUSerialParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D87B434917B727D45862619 /* DFUSerialParserTests.swift */; };
+		D83A86AB1457A1778FBA8326 /* RestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10C53F17C29BEF29FB45D0 /* RestoreService.swift */; };
+		D9679CF9588871429B83104F /* ECIDFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88599B8C5AA9DBB6E96BEB7 /* ECIDFormatterTests.swift */; };
+		DF672860A5A8DC9820D613BF /* ToolResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958063547A85318E728AC89D /* ToolResourceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		163F332EF51CBCBB9D86AAA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 048F1D849835591F2189F3C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA8361491349830737F75E15;
+			remoteInfo = "usb8-restore";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005492CCAB0FE6286AC6EE9C /* DeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMonitor.swift; sourceTree = "<group>"; };
+		1054EB1174B833C4783A9CB2 /* DFUSerialParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFUSerialParser.swift; sourceTree = "<group>"; };
+		1797EAEC1799FFB888C547DC /* Usb8RestoreSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Usb8RestoreSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		196FFA93A1730F0E50420B5A /* BootAssetStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootAssetStoreTests.swift; sourceTree = "<group>"; };
+		1D377BB0B30FEB50C11C6217 /* BootAssetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootAssetStore.swift; sourceTree = "<group>"; };
+		1D87B434917B727D45862619 /* DFUSerialParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFUSerialParserTests.swift; sourceTree = "<group>"; };
+		2B9C4F2DDC67DC2773CC8247 /* Usb8RestoreAppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Usb8RestoreAppIcon.icns; sourceTree = "<group>"; };
+		2E398CD0F6719F2E338A1DAE /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		4507EF7521A3C55FA216A2E9 /* PurpleModeAssetStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleModeAssetStoreTests.swift; sourceTree = "<group>"; };
+		4525983962E6A316C75F23D7 /* DeviceSupportCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSupportCatalog.swift; sourceTree = "<group>"; };
+		4587502391FF0E499D14CB9D /* PurpleModeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleModeService.swift; sourceTree = "<group>"; };
+		490A7FB240C87E84792F9862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5ACBB0FC8292C476EBFA50B3 /* Usbliter8BootOutputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usbliter8BootOutputTests.swift; sourceTree = "<group>"; };
+		76743C159B7DF71D4EB22396 /* DeviceSupportCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSupportCatalogTests.swift; sourceTree = "<group>"; };
+		872BA8841CFEC3C20B8B2E97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95228429C852C31137B45748 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = Sources/Usb8RestoreSwift/Resources; sourceTree = SOURCE_ROOT; };
+		958063547A85318E728AC89D /* ToolResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolResourceTests.swift; sourceTree = "<group>"; };
+		9E3B268D419A5E2E6DF525D5 /* Usb8RestoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usb8RestoreApp.swift; sourceTree = "<group>"; };
+		A1C7086A5C2621F83604D363 /* usb8-restore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "usb8-restore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88599B8C5AA9DBB6E96BEB7 /* ECIDFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECIDFormatterTests.swift; sourceTree = "<group>"; };
+		AB5321F81EFC6AEFD0A77924 /* AppResourceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResourceLocator.swift; sourceTree = "<group>"; };
+		AF10C53F17C29BEF29FB45D0 /* RestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreService.swift; sourceTree = "<group>"; };
+		B824F62FD0096C54D09243C2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		D4D9151F4E1AC35B4CB2D5B7 /* PurpleModeAssetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleModeAssetStore.swift; sourceTree = "<group>"; };
+		DEABC460BF029FFF5264F855 /* DeviceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModels.swift; sourceTree = "<group>"; };
+		EAE876566BB54604D543EA0E /* RestoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E351D96D64B62E5E28249E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				614149E11A8E2A27A2F3272F /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11E3FF167EAE924F2DD4E764 /* Usb8RestoreSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				196FFA93A1730F0E50420B5A /* BootAssetStoreTests.swift */,
+				76743C159B7DF71D4EB22396 /* DeviceSupportCatalogTests.swift */,
+				1D87B434917B727D45862619 /* DFUSerialParserTests.swift */,
+				A88599B8C5AA9DBB6E96BEB7 /* ECIDFormatterTests.swift */,
+				4507EF7521A3C55FA216A2E9 /* PurpleModeAssetStoreTests.swift */,
+				958063547A85318E728AC89D /* ToolResourceTests.swift */,
+				5ACBB0FC8292C476EBFA50B3 /* Usbliter8BootOutputTests.swift */,
+			);
+			name = Usb8RestoreSwiftTests;
+			path = Tests/Usb8RestoreSwiftTests;
+			sourceTree = "<group>";
+		};
+		3DD472168BE2D7DF904C27C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B824F62FD0096C54D09243C2 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E9779F346626E147181D51A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB5321F81EFC6AEFD0A77924 /* AppResourceLocator.swift */,
+				1D377BB0B30FEB50C11C6217 /* BootAssetStore.swift */,
+				005492CCAB0FE6286AC6EE9C /* DeviceMonitor.swift */,
+				1054EB1174B833C4783A9CB2 /* DFUSerialParser.swift */,
+				D4D9151F4E1AC35B4CB2D5B7 /* PurpleModeAssetStore.swift */,
+				4587502391FF0E499D14CB9D /* PurpleModeService.swift */,
+				AF10C53F17C29BEF29FB45D0 /* RestoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4F040352DD8B697517FEF1FA = {
+			isa = PBXGroup;
+			children = (
+				95228429C852C31137B45748 /* Resources */,
+				651E8616DA558C057606F83F /* Usb8RestoreSwift */,
+				11E3FF167EAE924F2DD4E764 /* Usb8RestoreSwiftTests */,
+				3DD472168BE2D7DF904C27C9 /* Frameworks */,
+				7B52A20F2CA25101F8D602D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		651E8616DA558C057606F83F /* Usb8RestoreSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2B9C4F2DDC67DC2773CC8247 /* Usb8RestoreAppIcon.icns */,
+				EBF90E4A7FA8D5F8E78CBDA1 /* App */,
+				B9D362C4C3F1170EDD083E09 /* Models */,
+				4E9779F346626E147181D51A /* Services */,
+			);
+			name = Usb8RestoreSwift;
+			path = Sources/Usb8RestoreSwift;
+			sourceTree = "<group>";
+		};
+		7B52A20F2CA25101F8D602D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1C7086A5C2621F83604D363 /* usb8-restore.app */,
+				1797EAEC1799FFB888C547DC /* Usb8RestoreSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9D362C4C3F1170EDD083E09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E398CD0F6719F2E338A1DAE /* AppLanguage.swift */,
+				DEABC460BF029FFF5264F855 /* DeviceModels.swift */,
+				4525983962E6A316C75F23D7 /* DeviceSupportCatalog.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBF90E4A7FA8D5F8E78CBDA1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				872BA8841CFEC3C20B8B2E97 /* ContentView.swift */,
+				490A7FB240C87E84792F9862 /* Info.plist */,
+				EAE876566BB54604D543EA0E /* RestoreViewModel.swift */,
+				9E3B268D419A5E2E6DF525D5 /* Usb8RestoreApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A03306F079F48FC87AFDD75 /* Usb8RestoreSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF2E55D90446C74C1D70CA15 /* Build configuration list for PBXNativeTarget "Usb8RestoreSwiftTests" */;
+			buildPhases = (
+				C9CC3FD96F4A048540785B2A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8C7E270A068DC2C02EFDA9E /* PBXTargetDependency */,
+			);
+			name = Usb8RestoreSwiftTests;
+			packageProductDependencies = (
+			);
+			productName = Usb8RestoreSwiftTests;
+			productReference = 1797EAEC1799FFB888C547DC /* Usb8RestoreSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA8361491349830737F75E15 /* usb8-restore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55727F9A089019671F41A479 /* Build configuration list for PBXNativeTarget "usb8-restore" */;
+			buildPhases = (
+				B3BBAA6F540CD701D3F788CA /* Sources */,
+				09C99CB855E92989B49AF35C /* Resources */,
+				1E351D96D64B62E5E28249E9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "usb8-restore";
+			packageProductDependencies = (
+			);
+			productName = "usb8-restore";
+			productReference = A1C7086A5C2621F83604D363 /* usb8-restore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		048F1D849835591F2189F3C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					BA8361491349830737F75E15 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 59305AA186A2EE0DC1A56A4E /* Build configuration list for PBXProject "usb8-restore" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4F040352DD8B697517FEF1FA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 54;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A03306F079F48FC87AFDD75 /* Usb8RestoreSwiftTests */,
+				BA8361491349830737F75E15 /* usb8-restore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09C99CB855E92989B49AF35C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				625A01F4724F40E3C5BC1671 /* Resources in Resources */,
+				713E2422903B84A5F158C85E /* Usb8RestoreAppIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3BBAA6F540CD701D3F788CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1095CE3D5734C57F810A04 /* AppLanguage.swift in Sources */,
+				BCF0E1CFAFAD98DFCF21AEBD /* AppResourceLocator.swift in Sources */,
+				2A6BBB2FB9045BB8AB073A87 /* BootAssetStore.swift in Sources */,
+				7613DD1C99DB686B768CEE79 /* ContentView.swift in Sources */,
+				8B5AB5BDBC327A21137427A3 /* DFUSerialParser.swift in Sources */,
+				23FF4F8314650920413B1FB2 /* DeviceModels.swift in Sources */,
+				B106C6164FA5B113C7C83650 /* DeviceMonitor.swift in Sources */,
+				B26020CC5A2A1C907810A371 /* DeviceSupportCatalog.swift in Sources */,
+				0F9A27A5FEBDC7E3A7CD96CC /* PurpleModeAssetStore.swift in Sources */,
+				41106F0134743B5E68834D7E /* PurpleModeService.swift in Sources */,
+				D83A86AB1457A1778FBA8326 /* RestoreService.swift in Sources */,
+				A2A921344C80F39B16116543 /* RestoreViewModel.swift in Sources */,
+				7AA812E9D1F509B2205FEA2C /* Usb8RestoreApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9CC3FD96F4A048540785B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C86C402F801488150B5FF79 /* BootAssetStoreTests.swift in Sources */,
+				CC32692370FEB339FDDEC23E /* DFUSerialParserTests.swift in Sources */,
+				A80AAFE258B635C04B05EAC4 /* DeviceSupportCatalogTests.swift in Sources */,
+				D9679CF9588871429B83104F /* ECIDFormatterTests.swift in Sources */,
+				13A5EDD4FA1F16BBEC9AEE2E /* PurpleModeAssetStoreTests.swift in Sources */,
+				DF672860A5A8DC9820D613BF /* ToolResourceTests.swift in Sources */,
+				834E96D050D830A40958E88B /* Usbliter8BootOutputTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8C7E270A068DC2C02EFDA9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA8361491349830737F75E15 /* usb8-restore */;
+			targetProxy = 163F332EF51CBCBB9D86AAA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5DBD80738C364EFD2BD321E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Usb8RestoreSwift/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.usb8restore.app;
+				PRODUCT_NAME = "usb8 restore";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9C5916720F3E250D8078BBE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		B07F1B45DA4D0197E1D923CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Usb8RestoreSwift/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.usb8restore.app;
+				PRODUCT_NAME = "usb8 restore";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B614C635064DB5F015F8C844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.usb8restore.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usb8-restore.app/Contents/MacOS/usb8-restore";
+			};
+			name = Release;
+		};
+		C4DDE7641AD6E06BE3903D38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.usb8restore.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/usb8-restore.app/Contents/MacOS/usb8-restore";
+			};
+			name = Debug;
+		};
+		CCBC12781887BF26DE6DC439 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55727F9A089019671F41A479 /* Build configuration list for PBXNativeTarget "usb8-restore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07F1B45DA4D0197E1D923CA /* Debug */,
+				5DBD80738C364EFD2BD321E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		59305AA186A2EE0DC1A56A4E /* Build configuration list for PBXProject "usb8-restore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCBC12781887BF26DE6DC439 /* Debug */,
+				9C5916720F3E250D8078BBE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FF2E55D90446C74C1D70CA15 /* Build configuration list for PBXNativeTarget "Usb8RestoreSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4DDE7641AD6E06BE3903D38 /* Debug */,
+				B614C635064DB5F015F8C844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 048F1D849835591F2189F3C7 /* Project object */;
+}
