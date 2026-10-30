@@ -11,20 +11,20 @@ enum DeviceMode: String, Sendable {
     func displayText(language: AppLanguage) -> String {
         switch self {
         case .disconnected:
-            return localized(language, "未连接", "Disconnected")
+            return localized(language, "未连接", "Disconnected", "Не подключено")
         case .normal:
-            return localized(language, "正常模式", "Normal Mode")
+            return localized(language, "正常模式", "Normal Mode", "Обычный режим")
         case .recovery:
-            return localized(language, "恢复模式", "Recovery Mode")
+            return localized(language, "恢复模式", "Recovery Mode", "Режим восстановления")
         case .dfu:
-            return localized(language, "DFU模式", "DFU Mode")
+            return localized(language, "DFU模式", "DFU Mode", "Режим DFU")
         case .pwndfu:
-            return localized(language, "PWNDFU模式", "PWNDFU Mode")
+            return localized(language, "PWNDFU模式", "PWNDFU Mode", "Режим PWNDFU")
         }
     }
 
     var displayText: String {
-        displayText(language: .english)
+        displayText(language: .russian)
     }
 }
 
@@ -89,18 +89,18 @@ enum ConnectionState: Equatable {
     func badgeText(language: AppLanguage) -> String {
         switch self {
         case .disconnected:
-            return localized(language, "未连接", "Disconnected")
+            return localized(language, "未连接", "Disconnected", "Не подключено")
         case .unsupported:
-            return localized(language, "设备不支持", "Device not supported")
+            return localized(language, "设备不支持", "Device not supported", "Устройство не поддерживается")
         case .needsPwndfu:
-            return localized(language, "请使用开发板进入PWNDFU", "Use the dev board to enter PWNDFU")
+            return localized(language, "请使用开发板进入PWNDFU", "Use the dev board to enter PWNDFU", "Требуется плата для перехода в PWNDFU")
         case .pwndfuReady:
-            return localized(language, "PWNDFU 已就绪", "PWNDFU Ready")
+            return localized(language, "PWNDFU 已就绪", "PWNDFU Ready", "PWNDFU готов")
         }
     }
 
     var badgeText: String {
-        badgeText(language: .english)
+        badgeText(language: .russian)
     }
 
     var badgeForeground: Color {
@@ -131,20 +131,20 @@ enum RestoreStep: Int, CaseIterable, Sendable {
     func title(language: AppLanguage) -> String {
         switch self {
         case .parseDevice:
-            return localized(language, "解析 CPID / BDID / PWND", "Parse CPID / BDID / PWND")
+            return localized(language, "解析 CPID / BDID / PWND", "Parse CPID / BDID / PWND", "Чтение CPID / BDID / PWND")
         case .confirmPwndfu:
-            return localized(language, "确认设备处于 PWNDFU", "Confirm device is in PWNDFU")
+            return localized(language, "确认设备处于 PWNDFU", "Confirm device is in PWNDFU", "Проверка режима PWNDFU")
         case .sendErase:
-            return localized(language, "发送抹除", "Send erase command")
+            return localized(language, "发送抹除", "Send erase command", "Отправка команды стирания")
         case .erasing:
-            return localized(language, "抹除中", "Erasing")
+            return localized(language, "抹除中", "Erasing", "Выполняется стирание")
         case .completed:
-            return localized(language, "抹除完成", "Erase complete")
+            return localized(language, "抹除完成", "Erase complete", "Стирание завершено")
         }
     }
 
     var title: String {
-        title(language: .english)
+        title(language: .russian)
     }
 }
 
@@ -176,14 +176,14 @@ enum OperationLogTab: String, CaseIterable, Sendable {
     func title(language: AppLanguage) -> String {
         switch self {
         case .erase:
-            return localized(language, "抹除", "Erase")
+            return localized(language, "抹除", "Erase", "Стирание")
         case .purple:
-            return "Purple"
+            return localized(language, "Purple", "Purple", "Режим Purple")
         }
     }
 
     var title: String {
-        title(language: .english)
+        title(language: .russian)
     }
 }
 
@@ -197,20 +197,20 @@ enum PurpleModeStep: Int, CaseIterable, Sendable {
     func title(language: AppLanguage) -> String {
         switch self {
         case .parseDevice:
-            return localized(language, "解析 CPID / BDID / PWND", "Parse CPID / BDID / PWND")
+            return localized(language, "解析 CPID / BDID / PWND", "Parse CPID / BDID / PWND", "Чтение CPID / BDID / PWND")
         case .confirmPwndfu:
-            return localized(language, "确认设备处于 PWNDFU", "Confirm device is in PWNDFU")
+            return localized(language, "确认设备处于 PWNDFU", "Confirm device is in PWNDFU", "Проверка режима PWNDFU")
         case .sendDiags:
-            return localized(language, "发送 diags", "Send diags")
+            return localized(language, "发送 diags", "Send diags", "Отправка diags")
         case .booting:
-            return localized(language, "引导中", "Booting")
+            return localized(language, "引导中", "Booting", "Загрузка...")
         case .completed:
-            return localized(language, "引导完成", "Boot complete")
+            return localized(language, "引导完成", "Boot complete", "Загрузка завершена")
         }
     }
 
     var title: String {
-        title(language: .english)
+        title(language: .russian)
     }
 }
 
