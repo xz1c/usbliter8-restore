@@ -9,7 +9,7 @@ final class RestoreViewModel: ObservableObject {
     @Published var selectedLogTab: OperationLogTab = .erase
     @Published private(set) var isRunning = false
     @Published var toast: String?
-    @Published var language: AppLanguage = .chinese
+    @Published var language: AppLanguage = .russian
 
     private let monitor: DeviceMonitoring
     private let restoreService: RestoreServicing
@@ -34,18 +34,18 @@ final class RestoreViewModel: ObservableObject {
 
     func startErase() async {
         guard let device else {
-            showToast(localized(language, "请连接设备", "Please connect a device"))
+            showToast(localized(language, "请连接设备", "Please connect a device", "Подключите устройство"))
             return
         }
 
         guard device.supportsErase else {
-            showToast(localized(language, "设备不支持", "Device not supported"))
+            showToast(localized(language, "设备不支持", "Device not supported", "Устройство не поддерживается"))
             return
         }
 
 
         guard device.mode == .pwndfu else {
-            showToast(localized(language, "请将设备进入PWNDFU", "Please put the device into PWNDFU"))
+            showToast(localized(language, "请将设备进入PWNDFU", "Please put the device into PWNDFU", "Переведите устройство в режим PWNDFU"))
             return
         }
 
@@ -59,7 +59,7 @@ final class RestoreViewModel: ObservableObject {
                     self?.markCompleted(completedStep)
                 }
             }
-            showToast(localized(language, "抹除成功", "Erase success"))
+            showToast(localized(language, "抹除成功", "Erase success", "Стирание завершено успешно"))
         } catch {
             if let restoreError = error as? RestoreError, let failedStep = restoreError.failedStep {
                 markFailed(failedStep)
@@ -77,18 +77,18 @@ final class RestoreViewModel: ObservableObject {
     func startPurpleMode() async {
         selectedLogTab = .purple
         guard let device else {
-            showToast(localized(language, "请连接设备", "Please connect a device"))
+            showToast(localized(language, "请连接设备", "Please connect a device", "Подключите устройство"))
             return
         }
 
         guard device.supportsPurpleMode else {
-            showToast(localized(language, "设备不支持", "Device not supported"))
+            showToast(localized(language, "设备不支持", "Device not supported", "Устройство не поддерживается"))
             return
         }
 
 
         guard device.mode == .pwndfu else {
-            showToast(localized(language, "请将设备进入PWNDFU", "Please put the device into PWNDFU"))
+            showToast(localized(language, "请将设备进入PWNDFU", "Please put the device into PWNDFU", "Переведите устройство в режим PWNDFU"))
             return
         }
 
@@ -101,7 +101,7 @@ final class RestoreViewModel: ObservableObject {
                     self?.markPurpleCompleted(completedStep)
                 }
             }
-            showToast(localized(language, "Purple mode 成功", "Purple mode success"))
+            showToast(localized(language, "Purple mode 成功", "Purple mode success", "Режим Purple запущен успешно"))
         } catch {
             if let purpleError = error as? PurpleModeError, let failedStep = purpleError.failedStep {
                 markPurpleFailed(failedStep)
@@ -163,6 +163,49 @@ final class RestoreViewModel: ObservableObject {
     private func localizedErrorMessage(_ error: Error) -> String {
         if language == .english {
             return error.localizedDescription
+        }
+
+        if language == .russian {
+            switch error {
+            case let error as RestoreError:
+                switch error {
+                case .missingSupport:
+                    return "Устройство не поддерживается"
+                case .missingBootAsset:
+                    return "Отсутствуют файлы загрузки"
+                case .missingTool(let name):
+                    return "Отсутствует инструмент: \\(name)"
+                case .deviceNotPwndfu:
+                    return "Устройство не находится в режиме PWNDFU"
+                case .commandFailed(_, let message):
+                    return message.isEmpty ? "Не удалось выполнить команду" : message
+                case .recoveryTimeout:
+                    return "Истекло время ожидания режима восстановления"
+                case .usbControlFailed(let message):
+                    return message
+                case .needsRepwn:
+                    return "Требуется повторная подготовка устройства"
+                }
+            case let error as PurpleModeError:
+                switch error {
+                case .missingSupport:
+                    return "Устройство не поддерживается"
+                case .missingDiagAsset:
+                    return "Отсутствуют ресурсы Purple"
+                case .missingTool(let name):
+                    return "Отсутствует инструмент: \\(name)"
+                case .deviceNotPwndfu:
+                    return "Устройство не находится в режиме PWNDFU"
+                case .commandFailed(_, let message):
+                    return message.isEmpty ? "Не удалось выполнить команду" : message
+                case .recoveryTimeout:
+                    return "Истекло время ожидания режима восстановления"
+                case .needsRepwn:
+                    return "Требуется повторная подготовка устройства"
+                }
+            default:
+                return error.localizedDescription
+            }
         }
 
         switch error {

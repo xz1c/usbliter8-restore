@@ -3,7 +3,7 @@ import AppKit
 
 struct ContentView: View {
     @ObservedObject var viewModel: RestoreViewModel
-    @State private var language: AppLanguage = .chinese
+    @State private var language: AppLanguage = .russian
 
     var body: some View {
         ZStack {
@@ -101,7 +101,7 @@ private struct SidebarView: View {
             .padding(.top, 25)
 
             VStack(spacing: 10) {
-                SidebarItem(title: localized(language, "设备", "Device"), icon: "iphone", selected: true)
+                SidebarItem(title: localized(language, "设备", "Device", "Устройство"), icon: "iphone", selected: true)
             }
 
             Spacer()
@@ -236,7 +236,7 @@ private struct MainPanel: View {
     }
 
     private var displayTitle: String {
-        viewModel.connectionState.isConnected ? localized(language, "设备已连接", "Device Connected") : localized(language, "请连接设备", "Please connect a device")
+        viewModel.connectionState.isConnected ? localized(language, "设备已连接", "Device Connected", "Устройство подключено") : localized(language, "请连接设备", "Please connect a device", "Подключите устройство")
     }
 }
 
@@ -250,7 +250,7 @@ private struct StatusBadge: View {
                 .fill(state == .pwndfuReady ? Color(red: 0.05, green: 0.58, blue: 0.34) : Color(red: 0.56, green: 0.60, blue: 0.67))
                 .frame(width: 8, height: 8)
 
-            Text(state == .pwndfuReady ? localized(language, "PWNDFU 已就绪", "PWNDFU Ready") : state.badgeText(language: language))
+            Text(state == .pwndfuReady ? localized(language, "PWNDFU 已就绪", "PWNDFU Ready", "PWNDFU готов") : state.badgeText(language: language))
                 .font(.system(size: 13, weight: .bold))
         }
         .foregroundColor(state == .pwndfuReady ? Color(red: 0.04, green: 0.45, blue: 0.25) : Color(red: 0.35, green: 0.38, blue: 0.45))
@@ -283,9 +283,8 @@ private struct DeviceCardView: View {
                     Text(displayName)
                         .font(.system(size: 28, weight: .bold))
                         .foregroundColor(Color(red: 0.10, green: 0.13, blue: 0.22))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.76)
-                        .truncationMode(.tail)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
                         .layoutPriority(1)
 
                     if let modeText {
@@ -309,10 +308,10 @@ private struct DeviceCardView: View {
 
                 HStack(spacing: 9) {
                     if let device {
-                        Pill(text: device.supportsErase ? localized(language, "抹除支持", "Erase Supported") : localized(language, "抹除不支持", "Erase Unsupported"), style: device.supportsErase ? .ready : .muted)
-                        Pill(text: device.supportsPurpleMode ? localized(language, "Purple 支持", "Purple Supported") : localized(language, "Purple 不支持", "Purple Unsupported"), style: device.supportsPurpleMode ? .ready : .muted)
+                        Pill(text: device.supportsErase ? localized(language, "抹除支持", "Erase Supported", "Стирание поддерживается") : localized(language, "抹除不支持", "Erase Unsupported", "Стирание не поддерживается"), style: device.supportsErase ? .ready : .muted)
+                        Pill(text: device.supportsPurpleMode ? localized(language, "Purple 支持", "Purple Supported", "Purple поддерживается") : localized(language, "Purple 不支持", "Purple Unsupported", "Purple не поддерживается"), style: device.supportsPurpleMode ? .ready : .muted)
                     } else {
-                        Pill(text: localized(language, "未连接设备", "No Device Connected"), style: .muted)
+                        Pill(text: localized(language, "未连接设备", "No Device Connected", "Устройство не подключено"), style: .muted)
                     }
                 }
 
@@ -346,7 +345,7 @@ private struct DeviceCardView: View {
 
     private var displayName: String {
         guard let device else {
-            return localized(language, "设备未连接", "Device Disconnected")
+            return localized(language, "设备未连接", "Device Disconnected", "Устройство отключено")
         }
 
         return device.displayName
@@ -359,24 +358,24 @@ private struct DeviceCardView: View {
     private var infoRows: [(title: String, value: String)] {
         guard let device else {
             return [
-                ("ECID", localized(language, "未获取", "Not Available")),
-                ("UDID", localized(language, "未获取", "Not Available")),
-                ("SN", localized(language, "未获取", "Not Available"))
+                ("ECID", localized(language, "未获取", "Not Available", "Нет данных")),
+                ("UDID", localized(language, "未获取", "Not Available", "Нет данных")),
+                ("SN", localized(language, "未获取", "Not Available", "Нет данных"))
             ]
         }
 
         return [
-            ("ECID", device.ecid ?? localized(language, "未获取", "Not Available")),
-            ("UDID", device.udid ?? localized(language, "未获取", "Not Available")),
-            ("SN", device.serialNumber ?? localized(language, "未获取", "Not Available"))
+            ("ECID", device.ecid ?? localized(language, "未获取", "Not Available", "Нет данных")),
+            ("UDID", device.udid ?? localized(language, "未获取", "Not Available", "Нет данных")),
+            ("SN", device.serialNumber ?? localized(language, "未获取", "Not Available", "Нет данных"))
         ]
     }
 
     private func showCopyToast(_ title: String) {
-        copyToast = localized(language, "\(title) 已复制", "\(title) Copied")
+        copyToast = localized(language, "\(title) 已复制", "\(title) Copied", "\(title) скопировано")
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 1_300_000_000)
-            if copyToast == localized(language, "\(title) 已复制", "\(title) Copied") {
+            if copyToast == localized(language, "\(title) 已复制", "\(title) Copied", "\(title) скопировано") {
                 copyToast = nil
             }
         }
@@ -477,7 +476,7 @@ private struct InfoRow: View {
     let language: AppLanguage
     let onCopied: (String) -> Void
     private var canCopy: Bool {
-        value != localized(language, "未获取", "Not Available")
+        value != localized(language, "未获取", "Not Available", "Нет данных")
     }
 
     var body: some View {
@@ -497,7 +496,7 @@ private struct InfoRow: View {
             Button {
                 copyValue()
             } label: {
-                Text(localized(language, "复制", "Copy"))
+                Text(localized(language, "复制", "Copy", "Коп."))
                     .font(.system(size: 11, weight: .bold))
                     .foregroundColor(canCopy ? Color(red: 0.20, green: 0.37, blue: 0.85) : Color(red: 0.58, green: 0.61, blue: 0.68))
                     .frame(width: 34, height: 24)
@@ -508,7 +507,7 @@ private struct InfoRow: View {
             }
             .buttonStyle(.plain)
             .disabled(!canCopy)
-            .help(canCopy ? localized(language, "复制完整\(title)", "Copy full \(title)") : localized(language, "\(title)未获取", "\(title) not available"))
+            .help(canCopy ? localized(language, "复制完整\(title)", "Copy full \(title)", "Копировать полностью: \(title)") : localized(language, "\(title)未获取", "\(title) not available", "\(title): нет данных"))
         }
         .padding(.horizontal, 12)
         .frame(width: 229, height: 39)
@@ -572,7 +571,7 @@ private struct ExecutionCardView: View {
                         Text(tab.title(language: language))
                             .font(.system(size: 12, weight: .bold))
                             .foregroundColor(selectedTab == tab ? .white : Color(red: 0.42, green: 0.48, blue: 0.60))
-                            .frame(width: 72, height: 28)
+                            .frame(width: language == .russian ? (tab == .purple ? 112 : 88) : 72, height: 28)
                             .background(
                                 RoundedRectangle(cornerRadius: 8)
                                     .fill(selectedTab == tab ? Color(red: 0.92, green: 0.18, blue: 0.31) : Color.white.opacity(0.54))
@@ -647,11 +646,11 @@ private struct DangerActionView: View {
     var body: some View {
         HStack(spacing: 16) {
             VStack(alignment: .leading, spacing: 4) {
-                Text(localized(language, "危险操作需要再次确认", "Dangerous operations require confirmation"))
+                Text(localized(language, "危险操作需要再次确认", "Dangerous operations require confirmation", "Подтвердите опасное действие"))
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(Color(red: 0.10, green: 0.13, blue: 0.22))
 
-                Text(localized(language, "如设备处于 DFU、恢复模式或正常模式，请使用开发板进入PWNDFU", "If the device is in DFU, recovery, or normal mode, use the dev board to enter PWNDFU"))
+                Text(localized(language, "如设备处于 DFU、恢复模式或正常模式，请使用开发板进入PWNDFU", "If the device is in DFU, recovery, or normal mode, use the dev board to enter PWNDFU", "Для продолжения требуется режим PWNDFU."))
                     .font(.system(size: 13, weight: .medium))
                     .foregroundColor(Color(red: 0.40, green: 0.44, blue: 0.54))
             }
@@ -659,10 +658,10 @@ private struct DangerActionView: View {
             Spacer()
 
             HStack(spacing: 14) {
-                DangerActionButton(title: "Purple mode", action: purpleAction)
+                DangerActionButton(title: localized(language, "Purple mode", "Purple mode", "Режим Purple"), action: purpleAction)
                     .disabled(isRunning)
 
-                DangerActionButton(title: isRunning ? localized(language, "执行中", "Running") : localized(language, "开始抹除", "Erase Device"), action: action)
+                DangerActionButton(title: isRunning ? localized(language, "执行中", "Running", "Выполняется") : localized(language, "开始抹除", "Erase Device", "Начать стирание"), action: action)
                     .disabled(isRunning)
             }
         }
